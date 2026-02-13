@@ -1,0 +1,11 @@
+{
+  "name": "tiktok-live-monitor",
+  "version": "1.0.0",
+  "description": "TikTok Live Monitor - Made by Dash",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "socket.io": "^4.7.2"
+  }
+}
