@@ -1,1 +1,0 @@
-Tiktok Sigma Thingy!
