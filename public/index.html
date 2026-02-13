@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TikTok Live Monitor</title>
+</head>
+<body>
+    <h1>TikTok Live Monitor</h1>
+    <p>Status: <span id="status">ONLINE</span></p>
+    <p>Viewers: <span id="viewers">0</span></p>
+    <p>Likes: <span id="likes">0</span></p>
+
+    <h3>Live Chat</h3>
+    <ul id="chat"></ul>
+
+    <footer>
+        <p>Made by Dash</p>
+    </footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        socket.on("update", (data) => {
+            document.getElementById("viewers").innerText = data.viewers;
+            document.getElementById("likes").innerText = data.likes;
+        });
+    </script>
+</body>
+</html>
